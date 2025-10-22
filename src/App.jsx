@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Player from "./components/Player.jsx";
+import Arena from "./components/arena.jsx";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [players, setPlayer] = useState([
+    {
+      nom: "Scorpion",
+      avatar: "src/assets/images/scorpionP1.png",
+      pv: 5,
+    },
+    {
+      nom: "Sub-Zero",
+      avatar: "src/assets/images/subzeroP2.webp",
+      pv: 5,
+    },
+  ]);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Arena>
+        {players.map((player, index) => (
+          <Player
+            key={index}
+            nom={player.nom}
+            avatar={player.avatar}
+            pv={player.pv}
+          />
+        ))}
+      </Arena>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
