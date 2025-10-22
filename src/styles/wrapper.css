@@ -1,0 +1,9 @@
+.wrapper{
+    margin: 0 auto;
+    width: 60vw;
+    height: 70vh;
+    border:20px solid transparent;
+    border-image: url('../assets/wood.jpg') 30 round;
+    overflow: hidden;
+    background-color: white;
+}
