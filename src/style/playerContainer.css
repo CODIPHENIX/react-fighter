@@ -1,0 +1,7 @@
+.pContainer {
+  border: 2px solid black;
+  min-width: 500px;
+  padding: 5px;
+  flex-grow: 1;
+  border-radius: 8px;
+}

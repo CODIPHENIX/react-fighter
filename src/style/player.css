@@ -1,0 +1,31 @@
+.avatar {
+  border: 2px solid black;
+  width: 100px;
+  height: 120px;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.tContainer {
+  margin-left: 10%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nom {
+  width: 300px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.pv {
+  font-size: 50px;
+  color: rgb(34, 191, 34);
+  display: inline-block;
+}
+
+.pvHeart {
+  height: 35px;
+  margin-left: 5%;
+}
