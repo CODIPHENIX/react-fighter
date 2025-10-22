@@ -4,12 +4,28 @@
   height: 120px;
   vertical-align: middle;
   display: inline-block;
+  border-radius: 8px;
+}
+
+.tContainer {
+  margin-left: 10%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .nom {
-  position: relative;
   width: 300px;
-  vertical-align: middle;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.pv {
+  font-size: 50px;
+  color: rgb(34, 191, 34);
   display: inline-block;
-  margin-left: 50px;
+}
+
+.pvHeart {
+  height: 35px;
+  margin-left: 5%;
 }

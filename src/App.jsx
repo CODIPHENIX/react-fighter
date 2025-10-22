@@ -4,16 +4,18 @@ import Arena from "./components/arena.jsx";
 import "./App.css";
 
 function App() {
-  const [players, setPlayer] = useState([
+  const [players, setPlayerPv] = useState([
     {
       nom: "Scorpion",
       avatar: "src/assets/images/scorpionP1.png",
       pv: 5,
+      bgImg: "",
     },
     {
       nom: "Sub-Zero",
       avatar: "src/assets/images/subzeroP2.webp",
       pv: 5,
+      bgImg: "",
     },
   ]);
 
