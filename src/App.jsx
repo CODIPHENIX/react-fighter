@@ -1,3 +1,5 @@
+
+import Buttonattack from './components/Buttonattack'
 import { useState } from "react";
 import Player from "./components/Player.jsx";
 import Arena from "./components/arena.jsx";
@@ -7,6 +9,7 @@ import './App.css'
 import Wrapper from './components/layout/wrapper'
 import Titre from './components/Titre'
 import Turn from './components/Turn'
+
 
 function App() {
   const [players, setPlayerPv] = useState([
@@ -24,6 +27,8 @@ function App() {
     },
   ]);
 
+  const [count, setCount] = useState(0)
+
   return (
     <>
       <Arena>
@@ -36,6 +41,19 @@ function App() {
           />
         ))}
       </Arena>
+      
+      <p>{players[count].nom}'s turn</p>
+      
+      <Buttonattack onClick={() => {
+          setCount((count + 1) % 2);
+          setPlayer(prevPlayers => {
+            const newPlayers = [...prevPlayers]; 
+            newPlayers[(count + 1) % 2] = { ...newPlayers[(count + 1) % 2], pv: newPlayers[(count + 1) % 2].pv - 1 };
+            return newPlayers;
+          });
+        }}
+        buttonText="Attack" />
+      
     <Titre titre='REACT ATTACT'/>
     <Wrapper>
       <Turn turn='put the turns here'/>
@@ -45,3 +63,5 @@ function App() {
 }
 
 export default App;
+
+
