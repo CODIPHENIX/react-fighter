@@ -1,0 +1,12 @@
+.turn{
+
+    padding: 0.3rem;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+}
+.turn p{
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
