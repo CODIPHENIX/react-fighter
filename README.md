@@ -1,16 +1,54 @@
-# React + Vite
+# React Fighter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React Fighter est un jeu interactif développé avec React, où deux joueurs s'affrontent dans une arène. Chaque joueur dispose d'un certain nombre de points de vie (PV), et le but est de réduire les PV de l'adversaire à zéro pour gagner.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Fonctionnalités
 
-## React Compiler
+- **Deux joueurs :** Chaque joueur a un avatar, un nom, et des points de vie (PV).
+- **Attaques :** Les joueurs attaquent à tour de rôle, réduisant les PV de l'adversaire.
+- **Détection de victoire :** Le jeu affiche un message lorsque l'un des joueurs gagne.
+- **Interface dynamique :** Les composants React affichent les informations des joueurs, les tours, et les boutons d'action.
+- **Styles personnalisés :** Une interface visuellement attrayante avec des styles CSS.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies utilisées
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React.js :** Framework JavaScript pour construire l'interface utilisateur.
+- **CSS :** Pour le style et la mise en page.
+- **JSON :** Utilisé pour stocker les données des joueurs.
+- **JavaScript :** Pour la logique du jeu (attaques, tours, détection de victoire).
+
+---
+
+## Installation et exécution
+
+Suivez ces étapes pour exécuter le projet localement :
+
+### 1. Clonez le dépôt
+```bash
+git clone <URL_DU_DEPOT>
+cd react-fighter
+
+```
+---
+
+### 2. Installez les dépendance
+
+Assurez-vous d'avoir Node.js installé, puis exécutez :
+```bash
+npm install
+
+```
+### 3. Démarrez le serveur de développement
+```bash
+npm start
+
+```
+
+
+
+
+

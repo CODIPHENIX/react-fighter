@@ -1,68 +1,44 @@
-
 import Buttonattack from './components/Buttonattack'
 import { useState } from "react";
-import Player from "./components/Player.jsx";
 import Arena from "./components/arena.jsx";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Wrapper from './components/layout/wrapper'
 import Titre from './components/Titre'
 import Turn from './components/Turn'
-
+import { handleAttack } from './utils/js/attackLogic';
+import playerData from './data/players.json';
 
 function App() {
-  const [players, setPlayerPv] = useState([
-    {
-      nom: "Scorpion",
-      avatar: "src/assets/images/scorpionP1.png",
-      pv: 5,
-      bgImg: "",
-    },
-    {
-      nom: "Sub-Zero",
-      avatar: "src/assets/images/subzeroP2.webp",
-      pv: 5,
-      bgImg: "",
-    },
-  ]);
+  const [players, setPlayerPv] = useState(playerData);
+  const [count, setCount] = useState(0);
+  const [winner, setWinner] = useState(null); 
 
-  const [count, setCount] = useState(0)
+  const handleAttackClick = () => {
+    const gameWinner = handleAttack(players, count, setCount, setPlayerPv);
+    if (gameWinner) {
+      setWinner(gameWinner);
+    }
+  };
 
   return (
     <>
-    <Titre titre='REACT ATTACT'/>
-    <Wrapper>
-      <Turn turn='put the turns here'/>
-      <Arena>
-        {players.map((player, index) => (
-          <Player
-            key={index}
-            nom={player.nom}
-            avatar={player.avatar}
-            pv={player.pv}
-          />
-        ))}
-      </Arena>
+      <Titre titre='REACT ATTACK' />
+      <Wrapper>
+        <Turn currentPlayer={players[count].nom} />
+        <Arena players={players} />
 
-      
-      <p>{players[count].nom}'s turn</p>
-      
-      <Buttonattack onClick={() => {
-          setCount((count + 1) % 2);
-          setPlayer(prevPlayers => {
-            const newPlayers = [...prevPlayers]; 
-            newPlayers[(count + 1) % 2] = { ...newPlayers[(count + 1) % 2], pv: newPlayers[(count + 1) % 2].pv - 1 };
-            return newPlayers;
-          });
-        }}
-        buttonText="Attack" />
-      
-    </Wrapper>
+        {players[0].pv == 0 || players[1].pv == 0 ? (
+          <h2 className='winner-announcement'>{winner} wins!</h2>   
+        ) : (
+          <Buttonattack
+            onClick={handleAttackClick}
+            buttonText="Attack"
+          />
+        )}
+        
+      </Wrapper>
     </>
   );
 }
 
 export default App;
-
-

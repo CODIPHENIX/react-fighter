@@ -1,5 +1,5 @@
 import PlayerContainer from "./PlayerContainer";
-import "../style/player.css";
+import "../utils/styles/player.css";
 
 export default function Player(props) {
   return (

@@ -1,4 +1,4 @@
-import "../style/playerContainer.css";
+import "../utils/styles/playerContainer.css";
 
 export default function PlayerContainer(props) {
   return <div className='pContainer'>{props.children}</div>;

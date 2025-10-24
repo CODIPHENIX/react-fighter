@@ -1,12 +1,11 @@
-.wrapper{
+div.wrapper{
     margin: 0 auto;
     width: 60vw;
     height: 70vh;
     border:20px solid transparent;
-    border-image: url('../assets/wood.jpg') 30 round;
+    border-image: url('../../assets/wood.jpg') 30 round;
     overflow: hidden;
     background-color: #aada9b;
-      /* Ajout pour le style pixel / Minecraft */
   box-shadow: 8px 8px 0 #2b2b2b; /* effet bloc */
   outline: 4px solid #3b3b3b; /* bordure extérieure type pixel */
   font-family: 'Press Start 2P', cursive;

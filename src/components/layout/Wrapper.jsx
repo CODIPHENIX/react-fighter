@@ -1,4 +1,4 @@
-import "../../styles/wrapper.css";
+import "../../utils/styles/wrapper.css";
 
 export default function Wrapper(props){
     return <div className='wrapper'>
