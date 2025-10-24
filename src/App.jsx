@@ -26,6 +26,9 @@ function App() {
 
   return (
     <>
+    <Titre titre='REACT ATTACT'/>
+    <Wrapper>
+      <Turn turn='put the turns here'/>
       <Arena>
         {players.map((player, index) => (
           <Player
@@ -36,9 +39,6 @@ function App() {
           />
         ))}
       </Arena>
-    <Titre titre='REACT ATTACT'/>
-    <Wrapper>
-      <Turn turn='put the turns here'/>
     </Wrapper>
     </>
   );
